@@ -1,0 +1,36 @@
+<!-- Author - DINESH K
+     date : 04.02.2023
+     Example for on click  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example for onclick Events</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+      <script>
+      function changecolor(x){
+        document.bgColor=x;
+      }
+
+    </script>
+    
+</head>
+<body> 
+  <select onchange="changecolor(this.value)">
+    <option value="">select the color </option>
+    <option value="blue">blue </option>
+    <option value="green">green</option>
+    <option value="yellow"> yellow </option>
+    <option value="red">red </option>
+    <option value="gray"> gray </option>
+    <option value="black">black </option>
+  </select>
+
+    
+
+    
+    
+</body>
+</html>

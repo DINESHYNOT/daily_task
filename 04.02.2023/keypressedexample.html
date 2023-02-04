@@ -1,0 +1,28 @@
+<!-- Author - DINESH K
+     date : 04.02.2023
+     Example for the keypressed  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key pressed</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body> 
+<p> Example for key pressed </p>
+    Enter your name : <input type="text">
+    <p>how many times key pressed :<span> </span></p>
+    
+    
+    <script>
+    $(document).ready(function(){
+        let x=0;
+        $("input").keypress(function(){
+            $("span").text(x=x+1);
+        });
+    });
+    </script>
+</body>
+</html>

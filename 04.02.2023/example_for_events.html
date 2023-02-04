@@ -1,0 +1,40 @@
+<!-- Author - DINESH K
+     date : 04.02.2023
+     Example for the focus and blur  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example for focus and blur</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body> 
+    Example for focus event <br> <br>
+    Username : <input onfocus="doSomeAction(this)" type = "text" placeholder="username"/> <br> <br>
+    Password : <input type = "text" placeholder = "password"/> <br> <br>
+    <input type = "submit"/>
+    <script>
+    function doSomeAction(element)
+    {  
+       console.log(element);
+    } 
+    </script>
+    
+    <br><br><br>
+    Example : blur event <br> <br>
+    Username : <input onblur="doSomeblur(this)" type = "text" placeholder="username"/> <br> <br>
+    Password : <input type = "text" placeholder = "password"/> <br> <br>
+    <input type = "submit"/>
+    
+    <script>
+    function doSomeblur(element)
+    {
+    console.log(element);
+    }
+    </script>
+    
+    
+</body>
+</html>
