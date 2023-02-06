@@ -1,0 +1,26 @@
+<!-- Author - DINESH K
+     date : 06.02.2023
+     Example for the Geolocation  -->
+     
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>geolocation example</title>
+    </head>
+    <body>
+        <h1> Example for the geolocation</h1>
+        <script>
+            const successcall = (position) =>{
+                console.log(position);
+            };
+            const errorcall = (error) =>{
+                console.log(error);
+            };
+            <!-- asking permission for current location -->
+            navigator.geolocation.getCurrentPosition(successcall,errorcall);
+
+        </script>
+    </body>
+</html>
