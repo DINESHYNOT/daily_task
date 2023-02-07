@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Selectors</title>
+</head>\
+<style>
+    div *{
+        background-color : yellow; /* universal selectors */
+    }
+    span {
+        color : red; /* type selector */
+    }
+    .design {
+        background-color: powderblue; /* class selector */
+        color : black;
+        font-weight: bold;
+    }
+    #id_selector {
+        text-shadow: 4px 4px 8px yellow; /*id selector */
+    }
+    a[target = "_blanck"] {              /* attribute selector */
+        background-color : red ;
+    }
+    a[href="https://www.mozilla.org/en-US/firefox/all/"]{
+        background-color : orange;
+    }
+    a[href$=".com"]
+    {
+        background-color:brown;
+    }
+</style>
+
+<body>
+    <div>
+        Example for universal selectors :<h1>selectors</h1>
+    </div>
+    Example for type selector :<br> <br>
+    <span> type selector </span> <p></p>
+    Example for class selector :
+    <p class = "design" > class selector</p>
+    Example for ID selector :
+    <p id = "id_selector"> ID selector</p>
+    Example for Attribute selector : <p></p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors" target = "_blanck">attribute selector</a><p></p>
+    <a href="https://www.mozilla.org/en-US/firefox/all/">firefox</a> <p></p>
+    <a href="https://www.google.com/">Google</a><p></p>
+    
+</body>
+</html>
