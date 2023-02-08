@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Flex box</title>
+</head>
+<style>
+    .container {
+        display : flex;
+        flex-direction: column;
+    }
+    #paragraph_1 {
+        background-color: blueviolet;
+        order : 3;
+    
+    }
+    #paragraph_2 {
+        background-color: silver;
+        order : 2;
+        
+    }
+    #paragraph_3{
+        background-color: burlywood;
+        order : 1;
+    }
+    p{
+        padding : 10px;
+    }
+</style>
+<style>
+    .box {
+        display : flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .boxes_1 {
+        background-color: royalblue;
+        border: 2px solid white;
+        width: 150px;
+        height: 200px;
+        flex-grow: 2;
+        flex-basis: 0;
+    
+    }
+    .boxes_2 {
+        background-color: rebeccapurple;
+        border: 2px solid white;
+        width: 150px;
+        height: 200px;
+        flex-grow: 1;
+        flex-basis: 0;
+    
+    }
+    .boxes_3 {
+        background-color: olivedrab;
+        border: 2px solid white;
+        width: 150px;
+        height: 200px;
+        flex-shrink: 0;
+    
+    }
+</style>
+<body>
+    <div class = "container" >
+        <p id = "paragraph_1">
+            This establishes the main-axis, thus defining the direction flex items are placed in the flex container. Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex items as primarily laying out either in horizontal rows or vertical columns..This defines a flex container; inline or block depending on the given value. It enables a flex context for all its direct children.</p>
+        <p id = "paragraph_2">
+            This establishes the main-axis, thus defining the direction flex items are placed in the flex container. Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex items as primarily laying out either in horizontal rows or vertical columns..This defines a flex container; inline or block depending on the given value. It enables a flex context for all its direct children.</p>
+        <p id = "paragraph_3">
+            This establishes the main-axis, thus defining the direction flex items are placed in the flex container. Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex items as primarily laying out either in horizontal rows or vertical columns..This defines a flex container; inline or block depending on the given value. It enables a flex context for all its direct children.</p>
+    </div>
+    <h1> Align</h1> 
+    <div class = "box">
+        <p class = "boxes_1">The first item will have one unit of space against the container edge, but two units of space </p>
+        <p class = "boxes_2">The first item will have one unit of space against the container edge, but two units of space </p>
+        <p class = "boxes_3">The first item will have one unit of space against the container edge, but two units of space </p>
+    </div>
+    
+</body>
+</html>
