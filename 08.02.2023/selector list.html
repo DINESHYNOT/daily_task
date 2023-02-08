@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>selector list</title>
+    <style>
+        h1,h3,h5 
+        {
+            background-color:blueviolet; /* single line grouping */
+        }
+    </style> 
+    <style> 
+        #main,
+        .content,
+        h4 + p {
+            background-color: greenyellow; /*multi level grouping */
+        }
+    </style>
+    Example for single line selector : <p> </p>
+    <h1> The CSS selector list (,) selects all the matching nodes. A selector list is a comma-separated list of selectors.</h1>
+    <h3>The CSS selector list (,) selects all the matching nodes. A selector list is a comma-separated list of selectors.</h3>
+    <h5>The CSS selector list (,) selects all the matching nodes. A selector list is a comma-separated list of selectors.</h5>
+    Example for multi level grouping : <p> </p>
+    <h2 class = "content" > This example shows grouping selectors in multiple lines using a comma-separated list <p> </p></h2>
+    <h2 id = "main" > This example shows grouping selectors in multiple lines using a comma-separated list</h2>
+    <h4>
+        This example shows grouping selectors in multiple lines using a comma-separated list
+    </h4>
+    <p> This example shows grouping selectors in multiple lines using a comma-separated list</p>
+</head>
+<body>
+
+    
+</body>
+</html>
