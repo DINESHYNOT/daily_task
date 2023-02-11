@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Async and differ </title>
+</head>
+
+<body>
+    <h1> Example for Script before access external source</h1>
+    <p> async and defer both instruct the browser to download the script(s) in a separate thread, while the rest of the
+        page (the DOM, etc.) is downloading, so the page loading is not blocked during the fetch process.</p>
+    <h3> After this paragraph , it takes some seconds to display the next paragraph</h3>
+    <script src="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps"></script>
+    <h1>Example for Script after access external source</h1>
+    <p> scripts with an async attribute will execute as soon as the download is complete. This blocks the page and does
+        not guarantee any specific execution order. </p>
+    <br>
+    <h1> Example for Async before access external source</h1>
+    <p> async and defer both instruct the browser to download the script(s) in a separate thread, while the rest of the
+        page (the DOM, etc.) is downloading, so the page loading is not blocked during the fetch process.</p>
+    <script async src="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps"></script>
+    <h1> Example for Async before access external source</h1>
+    <p> scripts with an async attribute will execute as soon as the download is complete. This blocks the page and does
+        not guarantee any specific execution order. </p>
+</body>
+
+</html>
