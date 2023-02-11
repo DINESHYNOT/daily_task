@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Math function</title>
+</head>
+
+<body>
+    <script>
+        let num = Math.floor(Math.random() * 10) + 1;
+        console.log(num);
+        // checkGuess();
+        // function checkGuess() {
+        //     alert('I am Dinesh k');
+        // }
+        const numbers = [1, 2, 3, 4, 5];
+        for (const number of numbers) {
+            console.log(number);
+        }
+        let string_1 = "usefull string methods";
+        let string_2 = "in Javascript";
+        console.log(string_1.concat(string_2));
+        console.log(string_1.slice(7, 14));
+        console.log(string_2.slice(3));
+        console.log(string_1.slice(-7));
+        console.log(string_1.replace("methods", "model"));
+        console.log(string_2.toUpperCase());
+        console.log(string_1.includes("model"));
+        //array
+        const arr = ["dinesh", "gopi", "gowtham", "sridharan"];
+        for (const name of arr) {
+            console.log(name);
+        }
+        //access the last element
+        console.log(arr[arr.length - 1]);
+        arr[0] = "balaji"; //replace the element
+        console.log(arr);
+        arr.push('dinesh', 'sennidurai'); // add new elements in last
+        console.log(arr);
+        arr.pop(); //remove the last element
+        arr.unshift('kumar'); // adding element in the first position
+        console.log(arr);
+        arr.shift(); //remove the element in the first position
+        function twice(number) {  // doubling the number
+            return 2 * number;
+        }
+        const number = [5, 2, 7, 6];
+        const doubled = numbers.map(twice);
+        console.log(doubled);
+        const a = ["Aspire", "systems", "in", "siruseri"];
+        console.log(a.join()); // 
+        console.log(a.join(", ")); // 
+        console.log(a.join(" + ")); // 
+        console.log(a.join(""));
+    </script>
+</body>
+
+</html>
