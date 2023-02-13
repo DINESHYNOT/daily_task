@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Add event listener</title>
+    <style>
+        #d1 {
+            background-color: blanchedalmond;
+            height: 250px;
+            width: 250px;
+        }
+
+        #d2 {
+            background-color: aquamarine;
+            height: 250px;
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1">
+        <p id="p1"> The best way to do this currently is to search for "mdn name-of-feature" with your favorite search
+            engine. Here's a shortcut to save you some time in this instance</p>
+    </div>
+    <div id="d2">
+        <p id="p2"> So, looking at this page, the error appears to be that we've spelled the function name wrong!
+            Remember that JavaScript is case-sensitive, so any slight difference in spelling or casing will cause an
+            error. </p>
+    </div>
+    <script>
+        var box_1 = document.getElementById("d1");
+        var box_2 = document.getElementById("d2");
+        var para_1 = document.getElementById("p1");
+        var para_2 = document.getElementById("p2");
+        box_1.addEventListener("click", ColorChange);
+        function ColorChange() {
+            d2.style.backgroundColor = "yellow";
+            p2.textContent = "EventListener - click";
+        }
+        box_2.addEventListener("mouseenter", Eventmouse);
+        function Eventmouse() {
+            d1.style.backgroundColor = "green";
+            p1.textContent = "EventListener - mouseenter";
+        }
+        //box_1.removeEventListener("click",ColorChange); remove Event Listener
+    </script>
+</body>
+
+</html>
