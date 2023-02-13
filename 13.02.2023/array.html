@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Array</title>
+</head>
+
+<body>
+    <h2 id = "store" ></h2>
+    <script>
+        var array = [1,2,3,4,5];
+        var array_2 = ['dinesh','balaji','gopi','gowtham','sridharan','senni'];
+        console.log(array);//printing all the elements in the array
+        console.log(array.length); //length of the array
+        console.log(array_2[1]); // indexing element
+        //updating 
+        array_2[0] = 'kumar';
+        console.log(array_2);
+        console.log(array_2.indexOf('kumar')); //index of character
+        array_2.push('sathur ganth'); // adding element in the last
+        array_2.pop(); // removing element in last position
+        array_2.shift(); // removing element in first position
+        console.log(array_2);
+        array.splice(0,3);
+        console.log(array);
+        //accessing every element in the array
+        for(var elements of array) {
+            console.log(elements);
+        }
+        // map()
+        function double(number) {
+            return number*3;
+        }
+        var numbers = [2,4,6,8,10];
+        var twice = numbers.map(double);
+        console.log(twice);
+        //filter
+        function long(companies) {
+            return companies.length >3;
+        }
+        const companies = ['aspire','tcs','cts','zoho','dell'];
+        const filteration = companies.filter(long);
+        console.log(filteration);
+        //split()
+        const text =  "My name is Dinesh K";
+        const spliting = text.split(" ",3); //my , name , dinesh
+        document.getElementById("store").innerHTML = spliting;
+        //join()
+        console.log(companies.join('-'));
+        //to string
+        console.log(numbers.toString());
+        
+    </script>
+
+</body>
+
+</html>
