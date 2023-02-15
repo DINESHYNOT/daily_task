@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>image changing</title>
+</head>
+
+<body>
+    <button onclick="myFunc()">click_me</button>
+    <script>
+        var index = 0;
+        function myFunc() {
+            if (index % 2 == 0) {
+                document.body.style.backgroundImage = "url('/home/dineshkumar/Pictures/JS/nature_1.jpeg')";
+                document.body.style.backgroundRepeat = "no-repeat";
+                document.body.style.backgroundSize = "cover";
+                document.body.style.backgroundAttachment = "fixed";
+                index++;
+            }
+            else {
+                document.body.style.backgroundImage = "url('/home/dineshkumar/Pictures/JS/nature_2.jpg')";
+                document.body.style.backgroundRepeat = "no-repeat";
+                document.body.style.backgroundSize = "cover";
+                document.body.style.backgroundAttachment = "fixed";
+                index++;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
