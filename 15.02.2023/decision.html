@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Decision Making</title>
+</head>
+
+<body>
+    <select id="company">
+        <option value="Aspire Systems">Aspire Systems</option>
+        <option value="CTS">CTS</option>
+        <option value="TCS">TCS</option>
+        <option value="Zoho">Zoho</option>
+        <option value="Hexaware"> Hexaware</option>
+    </select>
+    <p id="brand"></p>
+    <script>
+        const choice = document.getElementById("company");
+        const paragraph = document.getElementById("brand");
+        choice.addEventListener('change', details);
+        function details() {
+            const info = choice.value;
+            if (info == 'Aspire Systems') {
+                paragraph.textContent = 'Aspire Systems is a global technology services firm serving as a trusted technology partner for our customers. We work with some of the world most innovative enterprises and independent software vendors, helping them leverage technology and outsourcing in our specific areas of expertise.';
+                paragraph.style.backgroundColor = "pink";
+            }
+            else if (info == 'CTS') {
+                paragraph.textContent = 'Founded in 1896, CTS Corporation (NYSE: CTS) is a leading designer and manufacturer of products that Sense, Connect, and Move. The company manufactures sensors, actuators, and electronic components in North America, Europe, and Asia.';
+                paragraph.style.backgroundColor = "red";
+            }
+            else if (info == 'TCS') {
+                paragraph.textContent = 'Image result for tcs infoTCS offers a consulting-led, cognitive-powered, integrated portfolio of business, technology, and engineering services and solutions.';
+                paragraph.style.backgroundColor = "brown";
+            }
+            else if (info == 'Zoho') {
+                paragraph.textContent = 'At Zoho, we create beautiful software to solve business problems. We believe that software is the ultimate product of the mind and the hands.';
+                paragraph.style.backgroundColor = "powderblue";
+            }
+            else if (info == 'Hexaware') {
+                paragraph.textContent = 'Hexaware Technologies Limited is a leading global provider of IT and BPO services.';
+                paragraph.style.backgroundColor = "orange";
+            }
+
+
+        }
+    </script>
+
+</body>
+
+</html>
