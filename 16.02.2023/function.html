@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function</title>
+</head>
+
+<body>
+    <button id="change">Change color</button>
+    <script>
+        console.log(random(10));
+        function random(number) {
+            return Math.floor(Math.random() * number);
+        }
+        calling();
+        function calling() {
+            alert('welcome');
+        }
+        //default arguments
+        Func();
+        function Func(name = 'dinesh k') {
+            console.log(`welcome ${name}`);
+        }
+        //function return
+        const numbers = prompt(`Enter the number`);
+        console.log(square(numbers));
+        console.log(cube(numbers));
+        console.log(factorial(numbers));
+        function square(sq_num) {
+            return sq_num * sq_num;
+        }
+        function cube(cube_num) {
+            return cube_num * cube_num * cube_num;
+        }
+        function factorial(fact) {
+            if (fact === 0) {
+                return 1;
+            }
+            if (fact < 0) {
+                return undefined;
+            }
+            else {
+                let num = 1;
+                var result = 1;
+                while (num <= fact) {
+                    result *= num;
+                    num++;
+                }
+            }
+            return result;
+        }
+        //random colors
+        const btn = document.getElementById("change");
+        function random(number) {
+            return Math.floor(Math.random() * (number));
+        }
+        btn.addEventListener('click', backgroundChange);
+        function backgroundChange() {
+            const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+            document.body.style.backgroundColor = rndCol;
+        }
+        // onchange button within color changing .Event object e
+        btn.addEventListener('click', bgChange);
+        function bgChange(event) {
+            const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+            e.target.style.backgroundColor = rndCol;
+            console.log(event);
+        }
+    </script>
+
+</body>
+
+</html>
