@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Event bubbling</title>
+</head>
+
+<body>
+    <button id="container">Click me!</button>
+    <h1><pre id="output"></pre> </h1>
+    <script>
+        const output = document.getElementById("output");
+        const container = document.getElementById("container");
+        function handleClick() {
+            output.textContent += `You clicked on a BUTTON element\n`;
+        }
+        container.addEventListener('click', handleClick);
+    </script>
+</body>
+</html>
