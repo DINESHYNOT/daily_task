@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Objects examples</title>
+</head>
+
+<body>
+    <script>
+        const details = {   //creation of the object
+            name: ["dinesh", "balaji", "gopi"],  //variables
+            age: 21,
+            native: ["salem", "Udumalpet", "coimbatore"],
+            company: "Aspire Systems",
+            bio() {     //methods
+                console.log(`${this.name[0]} , ${this.name[1]} and ${this.name[2]} are working in ${this.company}`);
+            },
+            introduction() {
+                console.log(`My age is ${this.age}`);
+            },
+        };
+        details.bio();  //function 
+        details.introduction();
+        //value passing
+        function Property(propertyName) {
+            console.log(details[propertyName]);
+        }
+        Property("name");
+        //this keyword
+        const person1 = {
+            name: "Sridharan",
+            introduceSelf() {
+                console.log(`Hi! I am ${this.name}.`);
+            },
+        };
+        const person2 = {
+            name: "gowthamraj",
+            introduceSelf() {
+                console.log(`Hi! I am ${this.name}.`);
+            },
+        };
+        person1.introduceSelf();
+        person2.introduceSelf();
+        //constructor
+        function Person(name) {
+            this.name = name;
+            this.introduceSelf = function () {
+                console.log(`Hi! I'm ${this.name}.`);
+            };
+        }
+        const name_1 = new Person("vijay");
+        name_1.introduceSelf();
+        const name_2 = new Person("ajith");
+        name_2.introduceSelf();
+        //object prototype
+        const personPrototype = {
+            greet() {
+                console.log("hello!");
+            },
+        };
+        const carl = Object.create(personPrototype);
+        carl.greet();
+    </script>
+
+</body>
+
+</html>
