@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Stop progation</title>
+</head>
+
+<body>
+    <!-- event bubbling -->
+    <div id="div_ele">
+        <button id="button_ele">click</button>
+    </div>
+    <br>
+    <!-- stopPropagation -->
+    <div id="stoppro_1">
+        <button id="stoppro_2" onclick="event.stopPropagation()">click</button>
+    </div>
+    <br>
+    <!-- Event capture -->
+    <div id="capture_1">
+        <button id="capture_2">click</button>
+    </div>
+    <script>
+        // event bubbling
+        const ele_1 = document.getElementById("div_ele");
+        const ele_2 = document.getElementById("button_ele");
+        ele_1.addEventListener('click', function () {
+            console.log("div element");
+        });
+        ele_2.addEventListener('click', function () {
+            console.log("button element");
+        });
+        //stop progation 
+        const stoppro1 = document.getElementById("stoppro_1");
+        const stoppro2 = document.getElementById("stoppro_2");
+        stoppro1.addEventListener('click', function () {
+            console.log("div element");
+        });
+        stoppro2.addEventListener('click', function () {
+            console.log("button element");
+        });
+        //event capturing
+        const capture1 = document.getElementById("capture_1");
+        const capture2 = document.getElementById("capture_2");
+        capture1.addEventListener('click', function () {
+            console.log("div element");
+        }, true);
+        capture2.addEventListener('click', function () {
+            console.log("button element");
+        });
+
+
+    </script>
+
+</body>
+
+</html>
