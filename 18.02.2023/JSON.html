@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JSON Example</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <br>
+    <canvas id = "box"></canvas>
+
+    <script>
+        var employee = [
+            {
+                "name" : "Dinesh K",
+                "company" : "Aspire Systems",
+                "salary in lpa" : 4,
+                "domain" : "lamp"
+            },
+            {
+                "name" : "Amalan C",
+                "company" : "zoho",
+                "salary in lpa" : 6.5,
+                "domain" : "shift"
+            },
+            {
+                "name" : "Thanish Jackson",
+                "company" : "TCS",
+                "salary in lpa" : 4,
+                "domain" : "Java"
+            }
+        ]
+        //printing all the details
+        console.log(employee);
+        //particular employee details
+        console.log(employee[1]);
+        //async function()
+        async function Func() {
+            return 10;
+        }
+        console.log(Func());
+        //stringify()
+        let Obj = { name: "Gopinath", age: 22 };
+        let jsonString = JSON.stringify(Obj);
+        console.log(jsonString);
+        //JSON.parse()
+        const employee_1 = '{"name":"gowthamraj", "age":42}';
+        const obj = JSON.parse(employee_1);
+        console.log(obj);
+        console.log(obj.age);
+        //beginPath()
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.strokeStyle = "red";
+        ctx.moveTo(20, 40);
+        ctx.lineTo(200, 40);
+        ctx.stroke();
+        //beginPath() -- second line
+        ctx.beginPath();
+        ctx.strokeStyle = "brown";
+        ctx.moveTo(40, 20);
+        ctx.lineTo(120, 150);
+        ctx.stroke();
+        //fillStyle
+        const boxfill = document.getElementById("box");
+        const color = boxfill.getContext("2d");
+        color.fillStyle = "green";
+        color.fillRect(10, 10, 100, 100);
+
+
+    </script>
+    
+</body>
+</html>
