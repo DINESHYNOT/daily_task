@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Synchronous and Asynchronous</title>
+</head>
+<body>
+    <script>
+        //Example for Synchronous
+        const name = 'Dinesh';
+        console.log(greeting(name));
+        function greeting (name) {
+            return `Welcome ${name}`;
+        }
+        //call back
+        function step_3(number_3) {
+            return number_3 + 10;
+        }
+        function step_2(number_2) {
+            return number_2 + 10;
+        }
+        function step_1(number_1) {
+            return number_1 + 10;
+        }
+        function adding(number) {
+            result = step_1(number);
+            result = step_2(result);
+            result = step_3(result);
+        }
+        adding(10);
+        console.log(result);
+        //promises
+        const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+        fetchPromise
+        .then((response) => response.json())
+        .then((data) => {
+        console.log(data[0]);
+        });
+    </script>
+    
+</body>
+</html>
