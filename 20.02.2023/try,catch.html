@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>try , catch</title>
+</head>
+
+<body>
+    <script>
+        try {
+            var name = prompt('Enter your name');
+            if (!isNaN(name)) {
+                throw "Please enter the characters";
+            }
+            else {
+                console.log(name);
+            }
+        }
+        catch (error) {
+            console.log(error);
+        }
+        finally {
+            console.log("proceed to next stage"); 
+        }
+        //Async and Await with try and catch block
+        function locations() {
+            return new Promise((resolve, reject) => {
+                const res = false;
+                if (res) {
+                    setTimeout(resolve, 2000, "Salem");
+                }
+                else {
+                    reject("Not accessable");
+                }
+            });
+        }
+        async function calling() {
+            try {
+                console.log("Dinesh K");
+                loca = await locations();
+                console.log(loca);
+            }
+            catch(error) {
+                console.log(error);
+            }
+            finally {
+                console.log("finish");
+            }
+        }
+        calling();
+    </script>
+
+</body>
+
+</html>
