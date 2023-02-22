@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Prime numbers</title>
+</head>
+
+<body>
+    <script>
+        //Block-scoped function
+        function foo() {
+            console.log("1");
+        }
+        foo() === 0
+        {
+            function foo() {
+                console.log("2");
+            }
+            foo()
+        }
+        foo() === 1
+        //Arrow Functions
+        let evens = [1, 2, 3, 4, 5];
+        odds = evens.map(v => v + 1);
+        for (let ele of odds) {
+            console.log(ele);
+        }
+        pairs = evens.map(v => ({ even: v, odd: v + 1 }))
+        nums = evens.map((v, i) => v + i)
+        console.log(pairs);
+        console.log(nums);
+        //Arrow Functions Statement Bodies
+        var nums = [5, 7, 10, 12, 15, 28, 29, 20];
+        var fives = [];
+        nums.forEach(v => {
+            if (v % 5 === 0)
+                fives.push(v)
+        })
+        console.log(fives);
+        //Extended Parameter Handling true or false
+        function f(x, y = 7, z = 42) {
+            return x + y + z
+        }
+        const res = f(1) ===50
+        console.log(res);
+    </script>
+</body>
+
+</html>
