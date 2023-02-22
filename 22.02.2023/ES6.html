@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Prime numbers</title>
+</head>
+
+<body>
+    <script>
+        //Block-scoped function
+        function foo() {
+            console.log("1");
+        }
+        foo() === 0
+        {
+            function foo() {
+                console.log("2");
+            }
+            foo()
+        }
+        foo() === 1
+        //Arrow Functions
+        let evens = [1, 2, 3, 4, 5];
+        odds = evens.map(v => v + 1);
+        for (let ele of odds) {
+            console.log(ele);
+        }
+        pairs = evens.map(v => ({ even: v, odd: v + 1 }))
+        nums = evens.map((v, i) => v + i)
+        console.log(pairs);
+        console.log(nums);
+        //Arrow Functions Statement Bodies
+        var nums = [5, 7, 10, 12, 15, 28, 29, 20];
+        var fives = [];
+        nums.forEach(v => {
+            if (v % 5 === 0)
+                fives.push(v)
+        })
+        console.log(fives);
+        //Extended Parameter Handling true or false
+        function f(x, y = 7, z = 42) {
+            return x + y + z
+        }
+        const res = f(1) === 50
+        console.log(res);
+        //Rest Parameter
+        function f1(x, y, a) {
+            return (x + y) * a.length
+        }
+        const res2 = f1(1, 2, "7") === 9;
+        console.log(res2);
+        //Maps
+        const names = new Map([
+            ["Gopi", "Aspire"],
+            ["Thanish Jackson", "TCS"],
+            ["Vinoth", "CTS"]
+        ]);
+        console.log(names.get("Vinoth"))
+        //Sets
+        const number = new Set();
+        number.add(1);
+        number.add(2);
+        number.add(3);
+        console.log(number);
+        //Symbol
+        let salary = Symbol();
+        let details = {};
+        details.name = 'dinesh';
+        details.id = '3445';
+        details[salary] = '4lpa';
+        console.log(Object.keys(details));
+        console.log(details);
+        //Default Parameter Values
+        function para(first_name, last_name = " Kumar") {
+            return first_name + last_name;
+        }
+        const full_name = para("Dinesh");
+        console.log(full_name);
+        //Function Rest Parameter
+        function adding(...args) {
+            let result = 0;
+            for (let arg of args) {
+                result += arg;
+            }
+            return result;
+        }
+        let sum = adding(4, 9, 16, 25, 29, 100, 66, 77);
+        console.log(sum);
+
+    </script>
+</body>
+
+</html>
