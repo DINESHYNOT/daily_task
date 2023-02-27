@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var numbers = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5];
+        //remove the duplicates
+        numbers = new Array(new Set(numbers));
+        numbers.forEach(ele => {
+            console.log(ele);
+        })
+        //key and values
+        var numbers_1 = [5, 10, 15, 20, 25];
+        for (let index = 0; index < numbers_1.length; index++) {
+            console.log(index + " " + numbers_1[index]);
+        }
+        //reduce
+        var numbers_2 = [2, 2, 2, 2, 2];
+        var adding = numbers_2.reduce(add);
+        function add(value1, value2) {
+            return value1 + value2;
+        }
+        console.log(adding);
+        //arrow function
+        var double = numbers_1.map(element => element * 2);
+        console.log(double);
+        //promise
+        var booking = new Promise((resolve, reject) => {
+            let result = true;
+            if (result) {
+                resolve();
+            }
+            else {
+                reject();
+            }
+        })
+        booking.then(success)
+            .catch(failure)
+        function success() {
+            console.log("success"); a
+        }
+        function failure() {
+            console.log("failure");
+        }
+        //duplicate elements
+        var array_5 = [1, 4, 8, 2, 4, 1, 6, 2, 9, 7];
+        function findDuplicates(arr) {
+            return arr.filter((Value, Index) =>
+                arr.indexOf(Value) !== Index);
+        }
+        console.log(findDuplicates(array_5));
+    </script>
+
+</body>
+
+</html>
