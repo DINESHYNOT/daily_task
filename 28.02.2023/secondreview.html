@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Second review</title>
+</head>
+
+<body>
+    <script>
+        //sorting in the string
+        const string = ['dhamu', 'gopi', 'balaji', 'amalan'];
+        console.log(string.sort());
+        //Closures
+        function name() {
+            var id = 127;
+            function details() {
+                console.log(id);
+            }
+            details();
+        }
+        name();
+        //closure with var , let , const
+        var rollno = 2222; // global scope
+        function name1(id) {
+            if (id > 125) {
+                let result = 1; //local scope
+            }
+            else {
+                let result = 2;
+            }
+            //console.log(result);
+        }
+        name1(136);
+        console.log(rollno);
+        //deleting particular element in the string
+        const string_1 = ["dhamu", "gopi", "balaji", "amalan"];
+        string_1.splice(1, 1);
+        console.log(string_1);
+    </script>
+</body>
+
+</html>
